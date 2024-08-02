@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="image_compressed" type="image_compressed_node" name="image_compressed" output="screen">
+  </node>
+</launch>
