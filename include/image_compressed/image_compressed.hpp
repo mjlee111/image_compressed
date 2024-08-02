@@ -23,6 +23,8 @@ private:
   int init_argc;
   char** init_argv;
 
+  int quality;
+
   std::vector<std::string> image_topics;
   std::vector<std::string> previous_image_topics;
   std::vector<ros::Subscriber> image_subscriber;

@@ -2,8 +2,8 @@
 <package format="2">
   <name>image_compressed</name>
   <version>0.0.0</version>
-  <description>The image_compressed package</description>
-  <maintainer email="m@todo.todo">m</maintainer>
+  <description>Image Compressor Package</description>
+  <maintainer email="menggu1234@naver.com">mjlee111</maintainer>
   <license>TODO</license>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>cv_bridge</build_depend>
@@ -16,5 +16,8 @@
   <exec_depend>roscpp</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <export>
+    <launch>
+      <include>launch/converter.launch</include>
+    </launch>
   </export>
 </package>

@@ -28,6 +28,8 @@ bool Converter::init()
   updateTopicList();
 
   ros::NodeHandle nh;
+  nh.param("/image_compressed/quality", quality, 95);
+  std::cout << "[image] cv::IMWRITE_JPEG_QUALITY: " << quality << std::endl;
 
   start();
   return true;
@@ -115,7 +117,7 @@ void Converter::convertImageToCompressedImage(const sensor_msgs::ImageConstPtr& 
     cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
     std::vector<int> params;
     params.push_back(cv::IMWRITE_JPEG_QUALITY);
-    params.push_back(95);
+    params.push_back(quality);
 
     sensor_msgs::CompressedImage compressed_msg;
     compressed_msg.header = msg->header;

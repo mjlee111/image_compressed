@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="quality" default="80" />
+
   <node pkg="image_compressed" type="image_compressed_node" name="image_compressed" output="screen">
+    <param name="quality" value="$(arg quality)" />
   </node>
 </launch>
