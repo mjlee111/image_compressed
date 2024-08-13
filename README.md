@@ -1,5 +1,8 @@
 # Image Compressed ROS Package
 
+## ROS2 Support Available
+branch - ros2
+
 ## Overview
 The `image_compressed` package is a ROS node designed to subscribe to image topics, compress the images using JPEG encoding, and publish the compressed images to new topics. This package is useful for reducing the bandwidth usage when transmitting images over a ROS network.
 
